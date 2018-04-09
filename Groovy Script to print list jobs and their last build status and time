@@ -1,0 +1,13 @@
+//Groovy Script to List only Enabled Jobs 
+
+jobs = Jenkins.instance.getAllItems()
+jobs.each { job ->
+  println 'JOB: ' + job.fullName
+  numbuilds = job.builds.size()
+  if (numbuilds == 0) {
+    println '  -> no build'
+    return
+  }
+  lastbuild = job.builds[numbuilds - 1]
+    println '  -> lastbuild: ' + lastbuild.displayName + ' = ' + lastbuild.result + ', time: ' + lastbuild.timestampString2
+}
