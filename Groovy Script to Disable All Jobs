@@ -1,0 +1,9 @@
+import hudson.model.*
+jenkins = Hudson.instance
+def viewName="all";
+println ""
+println "--- Disabling all jobs in view: ${viewName}"
+println ""
+jenkins.instance.getView(viewName).items*.disabled = true
+//Now the above will disable it but you still need to save it. Otherwise, you'll loose your changes (of disabling the jobs) after each Jenkins restart.
+jenkins.instance.getView(viewName).items.each { item -> item.save() }
