@@ -1,0 +1,17 @@
+import hudson.model.*;
+
+jobs = Hudson.instance.getAllItems(FreeStyleProject); // get all jobs which exists    
+// iterate through the jobs
+for (j in jobs) {
+  // define a pattern, which jobs I  want to run
+  def pattern = 'trunk';
+  def m = j.getName() =~ pattern;
+ // if pattern matches, then run the job
+  if (!m) {
+    // first check, if job is buildable
+    if (j instanceof BuildableItem) {
+      // run that job
+      j.scheduleBuild();
+    }
+  }
+}
