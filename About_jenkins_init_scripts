@@ -1,0 +1,9 @@
+Upon startup, Jenkins will run $JENKINS_HOME/init.groovy.d/*.groovy scripts 
+
+Meanwhile, "Jenkins is getting ready..." message is displayed
+
+Drop files, restart Jenkins
+
+Allows you to preconfigure everything --
+
+without the GUIinit.groovy.d d
