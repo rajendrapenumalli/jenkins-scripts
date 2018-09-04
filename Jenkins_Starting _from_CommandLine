@@ -1,0 +1,3 @@
+#!/bin/sh
+cd %JENKINS_DIR%
+nohup java -jar jenkins.war --httpListenAddress=127.0.0.1 --httpPort=12121 > jenkins.log 2>&1 & echo $! > jenkins.pid
