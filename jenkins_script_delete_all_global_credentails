@@ -1,0 +1,7 @@
+import com.cloudbees.plugins.credentials.domains.Domain
+
+def credentialsStore = jenkins.model.Jenkins.instance.getExtensionList('com.cloudbees.plugins.credentials.SystemCredentialsProvider')[0].getStore()
+allCreds = credentialsStore.getCredentials(Domain.global())
+allCreds.each{
+   credentialsStore.removeCredentials(Domain.global(), it)
+}
