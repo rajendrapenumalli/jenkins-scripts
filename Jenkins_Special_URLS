@@ -1,0 +1,4 @@
+http://jenkins:8080/restart
+http://jenkins:8080/safeRestart
+http://jenkins:8080/quietDown
+http://jenkins:8080/cancelQuietDown
