@@ -1,0 +1,13 @@
+//Filtering by Given View:
+
+  def viewName="All"
+  def runningBuilds = Jenkins.instance.getView(viewName).getBuilds().findAll() { it.getResult().equals(null) }
+
+
+//All the Jobs:
+
+   def runningBuilds = Jenkins.instance.getItems().collect { job->
+      job.builds.findAll { it.getResult().equals(null) }
+    }.flatten()
+
+
