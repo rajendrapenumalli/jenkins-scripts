@@ -24,6 +24,8 @@ Procedure-1:
           InstallState.INITIAL_SETUP_COMPLETED.initializeState()
       }
       
+Refer Class : InstallState.java to understand different InstallStates of jenkins
+         Link: https://github.com/jenkinsci/jenkins/blob/master/core/src/main/java/jenkins/install/InstallState.java
       
 
 
