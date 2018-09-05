@@ -5,28 +5,29 @@ Procedure-1:
 
 
       #Script Name: startup.groovy
+      
       import jenkins.model.*
       import hudson.security.*
-
       import static jenkins.model.Jenkins.instance as jenkins
       import jenkins.install.InstallState
-      def instance = Jenkins.getInstance()
 
+      def instance = Jenkins.getInstance()
       def hudsonRealm = new HudsonPrivateSecurityRealm(false)
       hudsonRealm.createAccount("admin","test123")
       instance.setSecurityRealm(hudsonRealm)
       instance.save()
-
       def strategy = new FullControlOnceLoggedInAuthorizationStrategy()
       instance.setAuthorizationStrategy(strategy)
       instance.save()
-
       if (!jenkins.installState.isSetupComplete())
       {
           InstallState.INITIAL_SETUP_COMPLETED.initializeState()
       }
       
       
- Procedure-2: What is the proper way, if any, to skip the setup wizard completely?
+
+
+
+Procedure-2: What is the proper way, if any, to skip the setup wizard completely?
  
  -Djenkins.install.runSetupWizard=false
