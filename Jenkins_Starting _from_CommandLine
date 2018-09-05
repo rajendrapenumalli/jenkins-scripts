@@ -1,3 +1,10 @@
 #!/bin/sh
 cd %JENKINS_DIR%
 nohup java -jar jenkins.war --httpListenAddress=127.0.0.1 --httpPort=12121 > jenkins.log 2>&1 & echo $! > jenkins.pid
+
+
+Also if we need to setup initial admin password;
+  java -jar jenkins.war  --argumentsRealm.roles.user=admin --argumentsRealm.passwd.user=teste123
+
+For More details Refer Link:  
+    https://wiki.jenkins.io/display/JENKINS/Quick+and+Simple+Security
