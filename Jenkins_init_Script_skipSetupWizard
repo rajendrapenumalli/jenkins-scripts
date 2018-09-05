@@ -13,7 +13,7 @@ Procedure-1:
       def instance = Jenkins.getInstance()
 
       def hudsonRealm = new HudsonPrivateSecurityRealm(false)
-      hudsonRealm.createAccount("hello","world")
+      hudsonRealm.createAccount("admin","test123")
       instance.setSecurityRealm(hudsonRealm)
       instance.save()
 
