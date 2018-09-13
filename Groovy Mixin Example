@@ -1,0 +1,25 @@
+https://gist.github.com/paganotoni/2781567
+
+
+class Other {
+    def first = {
+        return list[0]
+    }
+
+    def hello(){
+        return "hello ${ myName() }"
+    }
+}
+
+@Mixin( Other )
+​class Simple {  
+    
+    def list = [1]
+    
+    def myName(){
+        return "Simple"
+    }
+}
+
+println new Simple().hello()
+println new Simple().first()
