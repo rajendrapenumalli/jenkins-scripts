@@ -7,3 +7,6 @@ Drop files, restart Jenkins
 Allows you to preconfigure everything --
 
 without the GUIinit.groovy.d d
+
+References
+https://github.com/Accenture/adop-jenkins/blob/master/resources/init.groovy.d/adop_ldap.groovy
