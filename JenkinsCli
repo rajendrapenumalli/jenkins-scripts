@@ -3,3 +3,7 @@ Command Template:
 java -jar jenkins-cli.jar -s http://<hostname>:8080/ help
       Example:
                java -jar jenkins-cli.jar -s http://localhost:8080/ help
+
+
+References:
+https://jenkins.io/doc/book/managing/cli/ refer to HTTP connection mode
