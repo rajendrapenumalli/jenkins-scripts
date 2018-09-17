@@ -1,0 +1,6 @@
+def portFromEnv = System.getenv("ANT_HOME")
+println""+portFromEnv
+
+def portFromEnv = System.getenv(JAVA_HOME")
+println""+portFromEnv
+
