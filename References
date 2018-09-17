@@ -1,5 +1,6 @@
 
 http://tdongsi.github.io/blog/2017/12/30/groovy-hook-script-and-jenkins-configuration-as-code/
+https://github.com/rajendrapenumalli/jenkins-startup-scripts/blob/master/scripts/main.groovy
 
 https://github.com/jenkinsci/jenkins-scripts/tree/master/scriptler
 https://wiki.jenkins.io/display/JENKINS/Jenkins+Script+Console
