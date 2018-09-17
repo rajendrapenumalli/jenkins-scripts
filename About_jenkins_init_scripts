@@ -10,3 +10,5 @@ without the GUIinit.groovy.d d
 
 References
 https://github.com/Accenture/adop-jenkins/blob/master/resources/init.groovy.d/adop_ldap.groovy
+http://tdongsi.github.io/blog/2017/12/30/groovy-hook-script-and-jenkins-configuration-as-code/
+
