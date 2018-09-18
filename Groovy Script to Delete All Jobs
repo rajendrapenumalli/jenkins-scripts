@@ -1,8 +1,17 @@
-/ Delete All Builds  for a Given Job Name/
+//Get Jobs List
+def jobsList=[];
+Jenkins.instance.getAllItems(AbstractProject.class).each {it ->
+  println it.fullName;
+  jobsList.add(it.fullName)
+}
+println "jobsList"+jobsList
 
-def jobName = "Your Job Name"; // change this variable to match the name of the job whose builds you want to delete
-def job = Jenkins.instance.getItem(jobName)
-job.getBuilds().each { it.delete() }
-job.nextBuildNumber = 1
-job.save()
-System.setProperty("hudson.util.ProcessTree.disable", "true");
+//Delete Each Job in sequential Mode
+jobsList.each{
+  def jobName = it
+  def job = Jenkins.instance.getItem(jobName)
+  job.getBuilds().each { it.delete() }
+  job.nextBuildNumber = 1
+  job.save()
+  System.setProperty("hudson.util.ProcessTree.disable", "true");
+}
