@@ -1,3 +1,6 @@
+import jenkins.model.*
+import hudson.model.*
+
 //Get Jobs List
 def jobsList=[];
 Jenkins.instance.getAllItems(AbstractProject.class).each {it ->
