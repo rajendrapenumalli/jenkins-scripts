@@ -1,0 +1,6 @@
+import jenkins.model.*
+import hudson.model.*
+for(j in jenkins.model.Jenkins.theInstance.getAllItems()) {
+    j.delete()
+}
+
