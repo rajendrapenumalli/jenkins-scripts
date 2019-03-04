@@ -1,0 +1,2 @@
+$ sudo /etc/init.d/jenkins restart
+Usage: /etc/init.d/jenkins {start|stop|status|restart|force-reload}
